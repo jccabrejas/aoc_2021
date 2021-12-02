@@ -3,12 +3,9 @@ from myutils.myutils import read_input
 import os
 import pandas as pd
 
-# Part 1
-filename = 'input1.txt' #'input2.txt' 'test1.txt' 'test2.txt'
-current_path = os.path.dirname(os.path.abspath(__file__))
-infile = os.path.join(current_path, 'day_02', filename)
-lines = read_input(infile)
+lines = read_input('input1.txt', __file__) #'input2.txt' 'test1.txt' 'test2.txt'
 
+# Part 1
 x, depth = 0, 0
 
 for line in lines:
