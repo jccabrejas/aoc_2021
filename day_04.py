@@ -76,4 +76,4 @@ def part2():
 
     return calc_score(boards[last_winner], draw_sequence[:last_number_position])
 
-print('Part 1: ', part2())
+print('Part 2: ', part2())
