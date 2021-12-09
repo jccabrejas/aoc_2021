@@ -2,10 +2,6 @@ import os
 from io import StringIO  # StringIO behaves like a file object
 
 import numpy as np
-import pandas as pd
-from numpy.core.fromnumeric import shape
-
-from myutils.myutils import read_input
 
 
 def main():
@@ -88,6 +84,7 @@ def part2(data):
             add_to_basin(data, basin)
 
     return np.prod(sorted([len(basin["seen"]) for basin in basins])[-3:])
+
 
 if __name__ == "__main__":
     main()
