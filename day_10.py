@@ -42,6 +42,7 @@ def part1(lines):
     score = {")": 3, "]": 57, "}": 1197, ">": 25137}
     result = 0
     for line in lines:
+        line = line.strip()
         while len(line) > 0:
             closing_position, closing = find_first_closing(line)
             if closing == "incomplete":
@@ -60,11 +61,12 @@ def part2(lines):
     results = list()
 
     for line in lines:
+        line = line.strip()
         result = 0
         while len(line) > 0:
             closing_position, closing = find_first_closing(line)
             if closing == "incomplete":
-                for s in line[::-1][1:]:
+                for s in reversed(line):
                     result = result * 5 + score[s]
                 results.append(result)
                 break
